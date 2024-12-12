@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('https://s3.voyapon.com/wp-content/uploads/sites/3/2022/03/23104630/educativo_japones_04-1024x682.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.5); 
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.login-btn {
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 20px 0;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #357ab7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #4a90e2;
+}
+
+.footer {
+    font-size: 0.8rem;
+    margin-top: auto;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .background {
+        background-image: url('imagenes/fondoCell.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .background::after {
+        background: rgba(63, 85, 109, 0.432); 
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 150px; 
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+}
+
+
